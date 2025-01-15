@@ -51,6 +51,31 @@ Outputs:
 
 ![Execution Context Phase 1](/assets/function.jpg "Execution Context")
 
+If variable is not available in local execution context, it takes from Global execution context
+```js
+var x = 1;
+a();
+b(); // we are calling the functions before defining them. This will work properly, as seen in Hoisting.
+console.log(x); // 3
+
+function a() {
+  console.log(x); // 1
+}
+
+function b() {
+  var x = 100;
+  console.log(x); // 2
+}
+```
+
+Outputs:
+
+> 1
+
+> 100
+
+> 1
+
 <hr>
 
 Watch Live On Youtube below:
