@@ -28,13 +28,27 @@ function getName(){
 * Now let's observe a different example and try to understand the output.
 ```js
 getName(); // Uncaught TypeError: getName is not a function
-console.log(getName);  // undefined as getName is treated as variable.
+console.log(getName);
 var getName = function () {  
     console.log("Namaste JavaScript");
 }
 // The code won't execute as the first line itself throws an TypeError.
 ```
-
+```js
+console.log(getName); // Undefined as getName is treated as variable
+var getName = function () {  
+    console.log("Namaste JavaScript");
+}
+// The code won't execute as the first line itself throws an TypeError.
+```
+Similar case in terms of arrow functions. They are treated as variables and hence assigned undefined in memory created phase.
+```js
+console.log(getName);
+var getName = () => {  
+    console.log("Namaste JavaScript");
+}
+// The code won't execute as the first line itself throws an TypeError.
+```
 <hr>
 
 Watch Live On Youtube below:
