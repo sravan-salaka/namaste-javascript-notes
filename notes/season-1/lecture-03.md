@@ -25,7 +25,7 @@ function getName(){
 }
 ```
 
-* Now let's observe a different example and try to understand the output.
+* Now let's observe a different example where getName is variable but not function and try to understand the output.
 ```js
 getName(); // Uncaught TypeError: getName is not a function
 console.log(getName);
