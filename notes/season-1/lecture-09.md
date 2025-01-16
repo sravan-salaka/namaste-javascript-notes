@@ -81,6 +81,9 @@ What is **Illegal Shadowing**?
     ```
     * We cannot shadow let with var. But it is **valid** to shadow a let using a let. However, we can shadow var with let.
     * All scope rules that work in function are same in arrow functions too.
+    * let declarations are hoisted to the top of their block and are in a "temporal dead zone" until they are initialized. They cannot coexist with var declarations of the same name within the same scope.
+    * let declares a block-scoped variable. The first declaration (let a = 20;) is scoped to the outer block.
+    * var declares a function-scoped (or global if not inside a function) variable. The second declaration (var a = 20;) attempts to declare a variable with the same name within the same function or global scope.
     * Since var is function scoped, it is not a problem with the code below.
         ```js
         let a = 20;
